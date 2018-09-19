@@ -14,15 +14,105 @@
     <link rel="stylesheet" href="iconfont/iconfont.css">
     <!--主题相关-->
     <link rel="stylesheet" href="theme_1/css/common.css">
-    <link rel="stylesheet" href="theme_1/css/red.css">
+    <!--<link rel="stylesheet" href="theme_1/css/red.css">-->
+    <link rel="stylesheet" href="red.css">
 </head>
 <body>
-<div class="theme_1_detail">
-    <div>
-        <div class="editable_form_title skin-color"><i class="iconfont icon-danju"></i>发货单</div>
+<div class="theme-1-detail pb-5">
+    <div class="card border-0 rounded-0 box-shadow-gary">
+        <div class="card-header p-0 module-detail-title skin-title skin-color pl-4 border-bottom position-relative bg-white">
+            <i class="iconfont icon-danju font-weight-bold position-absolute"></i><span class="pl-40">发货单</span>
+        </div>
         <!--可编辑表单-->
-        <div class="editable_form">
-
+        <div class="card-body p-0 py-4">
+            <form class="px-3 editable-form">
+               <div class="row mx-0">
+                   <div class="col-3 px-0">
+                       <div class="form-group row mx-0 mb-4">
+                           <label for="deliveryDate" class="col-3 col-form-label px-0 text-right">发货时间</label>
+                           <div class="col-9">
+                               <input  class="form-control skin-input" id="deliveryDate" >
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-3 px-0">
+                       <div class="form-group row mx-0 mb-4">
+                           <label for="deliveryDate" class="col-3 col-form-label px-0 text-right">发货时间</label>
+                           <div class="col-9">
+                               <select class="form-control skin-input">
+                                   <i class="iconfont icon-xiala1 position-absolute"></i>
+                                   <option>火车</option>
+                                   <option>火车</option>
+                               </select>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-3 px-0">
+                       <div class="form-group row mx-0 mb-4">
+                           <label for="deliveryDate" class="col-3 col-form-label px-0 text-right">发货时间</label>
+                           <div class="col-9">
+                               <input  class="form-control skin-input" id="deliveryDate" >
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-3 px-0">
+                       <div class="form-group row mx-0 mb-4">
+                           <label for="deliveryDate" class="col-3 col-form-label px-0 text-right">发货时间</label>
+                           <div class="col-9">
+                               <input  class="form-control skin-input" id="deliveryDate" >
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-3 px-0">
+                       <div class="form-group row mx-0 mb-4">
+                           <label for="deliveryDate" class="col-3 col-form-label px-0 text-right">发货时间</label>
+                           <div class="col-9">
+                               <select class="form-control skin-input">
+                                   <option>火车</option>
+                                   <option>火车</option>
+                               </select>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-3 px-0">
+                       <div class="form-group row mx-0 mb-4">
+                           <label for="deliveryDate" class="col-3 col-form-label px-0 text-right">FH1</label>
+                           <div class="col-9">
+                               <input  class="form-control skin-input" id="deliveryDate" >
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-3 px-0">
+                       <div class="form-group row mx-0 mb-4">
+                           <label for="deliveryDate" class="col-3 col-form-label px-0 text-right">发货时间</label>
+                           <div class="col-9">
+                               <input  class="form-control skin-input" id="deliveryDate" >
+                           </div>
+                       </div>
+                   </div>
+               </div>
+                <div class="row mx-0 py-4">
+                    <div class="col-3 px-0">
+                        <div class="form-group row mx-0 mb-0 note">
+                            <label for="note" class="col-3 col-form-label p-0 text-right">备注</label>
+                            <div class="col-9">
+                                <textarea class="form-control skin-input" id="note" rows="3" placeholder="内容请勿超过200字" maxlength="200"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="">
+        <div id="detailTable"></div>
+        <div class="py-4">
+            <p>合计：共选中<span class="font-weight-bold text-number-color">1</span>，本次发货数量<span class="font-weight-bold text-number-color">1000</span>，累计发货数量<span class="font-weight-bold text-number-color">1000</span>，数量<span class="font-weight-bold text-number-color">1000</span></p>
+        </div>
+        <div class="text-center">
+            <button class="btn skin-outline-button skin-color badge-pill px-5 mr-3">返回</button>
+            <button class="btn btn-warning text-white badge-pill px-5 mr-3">预览</button>
+            <button class="btn skin-button text-white badge-pill px-5 mr-3">提交</button>
         </div>
     </div>
 </div>
@@ -39,5 +129,40 @@
 <script src="http://gyj.icbc.com.cn/resource/CDN/datatables/1.10.16/js/jquery.dataTables.js"></script>
 <!--art模板-->
 <script src="http://gyj.icbc.com.cn/resource/CDN/artTemplate/4.12.2/template-web.js"></script>
+<script src="commonPlugins/DataTables.js"></script>
+<script>
+    $(function(){
+        var colArray=[
+            ["企业名称","companyName"],
+            ["创建时间","createTime"],
+            ["状态","status"]
+        ];
+        var dataList=[
+            {"companyName":"某某某公司","createTime":"2018-09-09","status":"已审核"},
+            {"companyName":"某某某公司","createTime":"2018-09-09","status":"已审核"},
+            {"companyName":"某某某公司","createTime":"2018-09-06","status":"已审核"}
+        ];
+        var tableConfig = {
+            paging:false,
+            processing:true,
+            searching:false,
+            ordering:true,
+            autoWidth:true,
+            scrollCollapse:true,
+            order:[],
+            columnDefs:[{orderable:false}]
+        };
+        var detailArr = [
+            ["id","table1"],
+            ["class","hover row-border nowrap detaiTable text-center"],
+            ["cellpadding","0"],
+            ["cellspacing","0"],
+            ["border","0"],
+            ["width","100%"],
+            ["style","table-layout:fixed"]
+        ];
+        var oTable=$("#detailTable").renderDatatables(colArray,[],dataList,tableConfig,detailArr);
+    });
+</script>
 </body>
 </html>

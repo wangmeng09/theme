@@ -41,24 +41,8 @@
 }
 .skin-outline-button:hover{
     color: #fff;
-    background-color: #c82333;
-    border-color: #bd2130;
-}
-/*按钮不能点击时效果*/
-.skin-button.disabled, .skin-button:disabled {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
-}
-.skin-other-button.disabled, .skin-other-button:disabled {
-    color: #fff;
-    background-color: #ffc107;
-    border-color: #ffc107;
-}
-.skin-outline-button.disabled, .skin-outline-button:disabled {
-    color: #dc3545;
-    border-color:#dc3545;
-    background-color: transparent;
+    background-color: #c7000a;
+    border-color: #c7000a;
 }
 /*汇总带背景效果*/
 .skin-total{
@@ -68,4 +52,8 @@
 /*input获取焦点时效果*/
 .skin-input:focus {
     border-color: #c7000a!important;
+}
+/*模块详情title左侧竖线*/
+.module-detail-title:before{
+    background-color: #c7000a;
 }

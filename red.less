@@ -1,0 +1,65 @@
+@base:#c7000a;
+@box-shdow:(@base,20%);
+@yellow:#ffb03f;
+@skin-color-hover:  darken(@base, 5%);
+@yellow-color-hover:  darken(@yellow, 10%);
+
+.skin-bg{
+  background-color: @base;
+}
+.skin-border{
+  border-color:@base;
+}
+.skin-color{
+  color:@base;
+}
+/*按钮组*/
+.skin-button{
+  border-color:@base;
+  background-color:@base;
+  -webkit-box-shadow:0 4px 5.76px 0.24px rgba(199,0,10,.2);
+  -moz-box-shadow:0 4px 5.76px 0.24px rgba(199,0,10,.2);
+  box-shadow:0 4px 5.76px 0.24px rgba(199,0,10,.2);
+}
+.skin-other-button{
+  border-color:@yellow;
+  background-color:@yellow;
+  -webkit-box-shadow: 0 4px 5.76px 0.24px rgba(255,176,63,.2);
+  -moz-box-shadow: 0 4px 5.76px 0.24px rgba(255,176,63,.2);
+  box-shadow:0 4px 5.76px 0.24px rgba(255,176,63,.2);
+}
+/*线性按钮*/
+.skin-outline-button{
+  border-color:@base!important;
+  background-color: transparent;
+  background-image: none;
+}
+/*鼠标滑过按钮效果*/
+.skin-button:hover{
+  color: #fff;
+  background-color: @skin-color-hover;
+  border-color: @skin-color-hover;
+}
+.skin-other-button:hover{
+  color: #fff;
+  background-color:  @yellow-color-hover;
+  border-color:  @yellow-color-hover;
+}
+.skin-outline-button:hover{
+  color: #fff;
+  background-color:@base;
+  border-color: @base;
+}
+/*汇总带背景效果*/
+.skin-total{
+  background-color: #ffdee0;
+  color: #000;
+}
+/*input获取焦点时效果*/
+.skin-input:focus {
+  border-color: @base!important;
+}
+/*模块详情title左侧竖线*/
+.skin-title:before{
+  background-color: @base;
+}

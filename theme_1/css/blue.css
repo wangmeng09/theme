@@ -1,0 +1,55 @@
+.skin-bg{
+    background-color: #5295fe;
+}
+.skin-border{
+    border-color:#5295fe;
+}
+.skin-color{
+    border-color:#5295fe;
+}
+/*按钮组*/
+.skin-button{
+    border-color:#5295fe;
+    background-color:#5295fe;
+    -webkit-box-shadow:0 4px 5.76px 0.24px rgba(82,149,254,.2);
+    -moz-box-shadow:0 4px 5.76px 0.24px rgba(82,149,254,.2);
+    box-shadow:0 4px 5.76px 0.24px rgba(82,149,254,.2);
+}
+.skin-other-button{
+    border-color:#55c794;
+    background-color:#55c794;
+    -webkit-box-shadow: 0 4px 5.76px 0.24px rgba(85,199,148,.2);
+    -moz-box-shadow: 0 4px 5.76px 0.24px rgba(85,199,148,.2);
+    box-shadow:0 4px 5.76px 0.24px rgba(85,199,148,.2);
+}
+/*线性按钮*/
+.skin-outline-button{
+    border-color:#5295fe;
+    background-color: transparent;
+    background-image: none;
+}
+/*鼠标滑过按钮效果*/
+.skin-button:hover{
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+.skin-other-button:hover{
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.skin-outline-button:hover{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+/*汇总带背景效果*/
+.skin-total{
+    background-color: #0e1e38;
+    color: #ffffff;
+}
+/*input获取焦点时效果*/
+.skin-input:focus {
+    border-color: #5295fe;
+}
